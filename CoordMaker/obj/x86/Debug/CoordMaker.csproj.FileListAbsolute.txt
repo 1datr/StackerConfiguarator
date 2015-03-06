@@ -1,0 +1,57 @@
+c:\users\anton\documents\visual studio 2010\Projects\CoordMaker\CoordMaker\bin\Debug\CoordMaker.exe
+c:\users\anton\documents\visual studio 2010\Projects\CoordMaker\CoordMaker\bin\Debug\CoordMaker.pdb
+c:\users\anton\documents\visual studio 2010\Projects\CoordMaker\CoordMaker\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\anton\documents\visual studio 2010\Projects\CoordMaker\CoordMaker\obj\x86\Debug\MainWindow.baml
+c:\users\anton\documents\visual studio 2010\Projects\CoordMaker\CoordMaker\obj\x86\Debug\MainWindow.g.cs
+c:\users\anton\documents\visual studio 2010\Projects\CoordMaker\CoordMaker\obj\x86\Debug\App.g.cs
+c:\users\anton\documents\visual studio 2010\Projects\CoordMaker\CoordMaker\obj\x86\Debug\CoordMaker_MarkupCompile.cache
+c:\users\anton\documents\visual studio 2010\Projects\CoordMaker\CoordMaker\obj\x86\Debug\CoordMaker.g.resources
+c:\users\anton\documents\visual studio 2010\Projects\CoordMaker\CoordMaker\obj\x86\Debug\CoordMaker.Properties.Resources.resources
+c:\users\anton\documents\visual studio 2010\Projects\CoordMaker\CoordMaker\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\anton\documents\visual studio 2010\Projects\CoordMaker\CoordMaker\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\anton\documents\visual studio 2010\Projects\CoordMaker\CoordMaker\obj\x86\Debug\CoordMaker.exe
+c:\users\anton\documents\visual studio 2010\Projects\CoordMaker\CoordMaker\obj\x86\Debug\CoordMaker.pdb
+C:\Users\ANTON\Documents\Visual Studio 2010\Projects\CoordMaker\CoordMaker\obj\x86\Debug\CoordMaker_MarkupCompile.lref
+C:\Users\ANTON\Documents\Visual Studio 2010\Projects\CoordMaker\CoordMaker\obj\x86\Debug\StackerRack.baml
+C:\Users\ANTON\Documents\Visual Studio 2010\Projects\CoordMaker\CoordMaker\obj\x86\Debug\StackerRack.g.cs
+C:\Users\ANTON\Documents\Visual Studio 2010\Projects\CoordMaker\CoordMaker\bin\Debug\DataGrid2DLibrary.dll
+C:\Users\ANTON\Documents\Visual Studio 2010\Projects\CoordMaker\CoordMaker\bin\Debug\DataGrid2DLibrary.pdb
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\CoordMaker.exe
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\CoordMaker.pdb
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\bin\Debug\CoordMaker.exe
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\bin\Debug\CoordMaker.pdb
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\bin\Debug\DataGrid2DLibrary.dll
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\bin\Debug\DataGrid2DLibrary.pdb
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\CoordMaker.csprojResolveAssemblyReference.cache
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\StackerRack.baml
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\MainWindow.g.cs
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\StackerRack.g.cs
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\App.g.cs
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\CoordMaker_MarkupCompile.cache
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\CoordMaker_MarkupCompile.lref
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\MainWindow.baml
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\CoordMaker.g.resources
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\CoordMaker.Properties.Resources.resources
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\CoordMaker.csproj.GenerateResource.Cache
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\Dlgfilename.baml
+D:\программы\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\Dlgfilename.g.cs
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\CoordMaker.exe
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\CoordMaker.pdb
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\Dlgfilename.baml
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\StackerRack.baml
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\Dlgfilename.g.cs
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\MainWindow.g.cs
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\StackerRack.g.cs
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\App.g.cs
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\CoordMaker_MarkupCompile.cache
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\CoordMaker_MarkupCompile.lref
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\bin\Debug\CoordMaker.exe
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\bin\Debug\CoordMaker.pdb
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\bin\Debug\DataGrid2DLibrary.dll
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\bin\Debug\DataGrid2DLibrary.pdb
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\MainWindow.baml
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\CoordMaker.g.resources
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\CoordMaker.Properties.Resources.resources
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\программы\без мусора\BnRStackerConfigurator-master\BnRStackerConfigurator-master\CoordMaker\obj\x86\Debug\GenerateResource.write.1.tlog

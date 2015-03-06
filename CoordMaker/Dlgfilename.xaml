@@ -1,0 +1,19 @@
+﻿<Window x:Class="CoordMaker.Dlgfilename"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Как будет называться файл?" Height="233" Width="296" WindowStyle="ToolWindow" Loaded="Window_Loaded" Activated="Window_Activated">
+    <Grid>
+        <StackPanel>
+        <RadioButton GroupName="confname" Margin="20,10" IsChecked="True" Checked="RadioButton_Checked">configSH1.xml</RadioButton>
+        <RadioButton GroupName="confname" Margin="20,10" Checked="RadioButton_Checked_1">configSH2.xml</RadioButton>
+        <RadioButton GroupName="confname" Margin="20,10" Checked="RadioButton_Checked_2">configSIM.xml</RadioButton>
+        <RadioButton GroupName="confname" Margin="20,8" Checked="RadioButton_Checked_3">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="0,0,10,0" Padding="0,3,0,0">Собственное имя:</TextBlock>
+                    <TextBox Name="xml_filename" TextChanged="xml_filename_TextChanged">configSH3.xml</TextBox>
+                </StackPanel>
+            </RadioButton>
+            <Button Margin="55,10" Click="Button_Click">ОК</Button>
+        </StackPanel>
+    </Grid>
+</Window>
