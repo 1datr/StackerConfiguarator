@@ -16,7 +16,7 @@
                 <MenuItem Header="Open" Command="Open"></MenuItem>
                 <MenuItem Header="Save" Command="Save"></MenuItem>
                 <MenuItem Header="Save as ..." Command="ApplicationCommands.SaveAs"></MenuItem>
-                <MenuItem Header="Export" Command="command:MyCommands.CmdExport"> </MenuItem>
+                <MenuItem Header="Import" Command="command:MyCommands.CmdImport"> </MenuItem>
                 <MenuItem Header="Exit" Command="ApplicationCommands.Close"></MenuItem>
             </MenuItem>
         </Menu>
@@ -269,15 +269,15 @@
                 </GroupBox>
 
                 <GroupBox Grid.Column="6" Grid.RowSpan="4" Header="Жестко заданные ячейки">
-                        <DataGrid ItemsSource="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=my:MainWindow, AncestorLevel=1}, Path=ProjectData.FixPointList}" AutoGenerateColumns="False">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Binding="{Binding Path=Y}" Header="ID" Width="30" />
-                            <DataGridTextColumn Binding="{Binding Path=X}" Header="X" Width="35" />
-                            <DataGridTextColumn Binding="{Binding Path=Y}" Header="Y" Width="35" />
-                            <DataGridCheckBoxColumn Binding="{Binding Path=Right}" Header="Справа" Width="*" />
-                        </DataGrid.Columns>
-                    </DataGrid>
-                </GroupBox>
+                        <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=my:MainWindow, AncestorLevel=1}, Path=ProjectData.FixPointList}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Path=CellID, Mode=TwoWay}" Header="№ Ячейки" Width="*" />
+                                <DataGridTextColumn Binding="{Binding Path=X, Mode=TwoWay}" Header="X" />
+                                <DataGridTextColumn Binding="{Binding Path=Y, Mode=TwoWay}" Header="Y" />
+                                <DataGridCheckBoxColumn Binding="{Binding Path=Right, Mode=TwoWay}" Header="Справа" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </GroupBox>
             </Grid>
         </TabItem>
         <TabItem Header="Инкременты">

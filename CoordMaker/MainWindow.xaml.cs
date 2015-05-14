@@ -362,7 +362,7 @@ namespace CoordMaker
             set { SetValue(FixedPointsDP, value); }
         }
 
-        public RoutedCommand Export
+        public RoutedCommand Import
         {
             get { return (RoutedCommand)GetValue(ExportCommandProperty); }
             set { SetValue(ExportCommandProperty, value); }
@@ -400,7 +400,7 @@ namespace CoordMaker
             CommandBinding exportCommand = new CommandBinding(Export, execute, canExecute);
             CommandBindings.Add(exportCommand);*/
             CommandBindings.Add(
-                    new CommandBinding(MyCommands.CmdExport,   // this is the command object
+                    new CommandBinding(MyCommands.CmdImport,   // this is the command object
                                 execute,      // execute
                                 canExecute));// can execute?
         }
@@ -451,9 +451,9 @@ namespace CoordMaker
             {
                 SaveProject(true);
             }
-            else if (e.Command == MyCommands.CmdExport)
+            else if (e.Command == MyCommands.CmdImport)
             {
-                ExportCfg();
+                ImportCfg();
             }
         }
 
@@ -623,7 +623,7 @@ namespace CoordMaker
 
         
 
-        private void ExportCfg()
+        private void ImportCfg()
         {
             String xmlfilename = "";
             System.Windows.Forms.FolderBrowserDialog folderdlg = new System.Windows.Forms.FolderBrowserDialog();
@@ -644,7 +644,7 @@ namespace CoordMaker
                 {
                     // Open document
                     filename = dlf.FileName;
-                    ProjectData.Export(xmlfilename + "/" + filename);
+                    ProjectData.Import(xmlfilename + "/" + filename);
                 }
             }
 
@@ -706,8 +706,8 @@ namespace CoordMaker
 
     public static class MyCommands
     {
-        public static RoutedUICommand CmdExport = new RoutedUICommand("CmdExport",
-                                                                   "CmdExport",
+        public static RoutedUICommand CmdImport = new RoutedUICommand("CmdImport",
+                                                                   "CmdImport",
                                                                    typeof(MyCommands));
     }
 
@@ -799,7 +799,7 @@ namespace CoordMaker
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected void OnPropertyChanged(string prop)
+        public void OnPropertyChanged(string prop)
         {
             if (PropertyChanged != null)
             {
@@ -841,8 +841,15 @@ namespace CoordMaker
         private bool fRight = false;
         public bool Right
         {
-            get { return fRight; }
-            set { fRight = value; }
+            get 
+            { 
+                return fRight; 
+            }
+            set 
+            { 
+                fRight = value;
+                OnPropertyChanged("Right");
+            }
         }
 
         public CuttingPoint(Int32 x = 0, Int32 y = 0, Boolean right = false)
@@ -859,10 +866,67 @@ namespace CoordMaker
             fRight = false;
         }
     }
+
     [Serializable]
-    public class PointAddr : CuttingPoint
+    public class PointAddr : DependencyObject, INotifyPropertyChanged
     {
-        private Int32 fCellID;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChanged(string prop)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+
+            }
+        }
+
+        private Int32 fX;
+        public Int32 X
+        {
+            get
+            {
+                return fX;
+            }
+
+            set
+            {
+                fX = value;
+                OnPropertyChanged("X");
+            }
+        }
+
+        private Int32 fY;
+        public Int32 Y
+        {
+            get
+            {
+                return fY;
+            }
+
+            set
+            {
+                fY = value;
+                OnPropertyChanged("Y");
+            }
+        }
+
+        private bool fRight = false;
+        public bool Right
+        {
+            get
+            {
+                return fRight;
+            }
+            set
+            {
+                fRight = value;
+                OnPropertyChanged("Right");
+            }
+        }
+
+        private Int32 fCellID=0;
         public Int32 CellID
         {
             get
@@ -879,7 +943,7 @@ namespace CoordMaker
 
         public PointAddr(Int32 cellid = 0, Int32 x = 0, Int32 y = 0, Boolean right = false)
         {
-            fCellID = cellid;
+            CellID = cellid;
             X = x;
             Y = y;
             Right = right;
@@ -893,7 +957,6 @@ namespace CoordMaker
             Right = false;
         }
     }
-
     
     //
     public static class DataGridHelper

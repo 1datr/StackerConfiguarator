@@ -258,7 +258,7 @@ namespace CoordMaker
                 this.OnSizeChange_hndlr(CoordsYList.Count, CoordsXList.Count);
         }
 
-        public void Export(String filename)
+        public void Import(String filename)
         {
             var xmlbuf = GetXML();
             xmlbuf.Save(filename);
@@ -266,7 +266,7 @@ namespace CoordMaker
 
         private List<XElement> MakeCells()
         {
-            List<XElement> cells = new List<XElement>();
+            
      /*       try
             {*/
                 // Build left and right cell matrix numbers
@@ -288,6 +288,19 @@ namespace CoordMaker
                     }
                 }
 
+                for (int i = 0; i < FixPointList.Count; i++) 
+                {
+                    if (FixPointList[i].Right)
+                    {
+                        Matr_Right[FixPointList[i].X, FixPointList[i].Y] = FixPointList[i].CellID;
+                    }
+                    else 
+                    {
+                        Matr_Left[FixPointList[i].X, FixPointList[i].Y] = FixPointList[i].CellID;
+                    }
+                }
+
+
                 x = 0;
                 y = 0;
             
@@ -301,33 +314,25 @@ namespace CoordMaker
                     { }
                     else
                     {
+                        IEnumerable<PointAddr> InFixed = this.FixPointList.Where(p => (p.CellID == c));
+                        if (InFixed.Count() == 0)
+                        {
 
-                        IEnumerable<CuttingPoint> Empty = CuttingPointList.Where(p => ((p.X == x) && (p.Y == y) && (p.Right == false)));
-                        if (Empty.Count() > 0) // spend the cell
-                        {
-                            Matr_Left[y, x] = -1;
-                        }
-                        else
-                        {
-                            List<PointAddr> GP = FixPointList.Where(p => ((p.CellID == c) && (p.Right == false))).ToList<PointAddr>();
-                            if (GP.Count() > 0) // point found - set it in matr
+                            IEnumerable<CuttingPoint> Empty = CuttingPointList.Where(p => ((p.X == x) && (p.Y == y) && (p.Right == false)));
+                            if (Empty.Count() > 0) // spend the cell
                             {
-                                move = false;
-                                if ((GP[0] as PointAddr).Right)
-                                {
-                                    Matr_Right[(GP[0] as PointAddr).Y, (GP[0] as PointAddr).X] = c;
-                                }
-                                else
-                                {
-                                    Matr_Left[(GP[0] as PointAddr).Y, (GP[0] as PointAddr).X] = c;
-                                }
+                                Matr_Left[y, x] = -1;
                             }
                             else
                             {
+
                                 Matr_Left[y, x] = c;
+
+                                c++;
                             }
-                            c++;
                         }
+                        else
+                            c++;
                     }
                     if (move)
                     {
@@ -353,33 +358,23 @@ namespace CoordMaker
                     { }
                     else
                     {
-
-                        IEnumerable<CuttingPoint> Empty = CuttingPointList.Where(p => ((p.X == x) && (p.Y == y) && (p.Right=true)));
-                        if (Empty.Count() > 0) // spend the cell
+                        IEnumerable<PointAddr> InFixed = this.FixPointList.Where(p => (p.CellID == c));
+                        if (InFixed.Count() == 0)
                         {
-                            Matr_Right[y, x] = -1;
-                        }
-                        else
-                        {
-                            List<PointAddr> GP = FixPointList.Where(p => ((p.CellID == c) && (p.Right == false))).ToList<PointAddr>();
-                            if (GP.Count() > 0) // point found - set it in matr
+                            IEnumerable<CuttingPoint> Empty = CuttingPointList.Where(p => ((p.X == x) && (p.Y == y) && (p.Right = true)));
+                            if (Empty.Count() > 0) // spend the cell
                             {
-                                move = false;
-                                if ((GP[0] as PointAddr).Right)
-                                {
-                                    Matr_Right[(GP[0] as PointAddr).Y, (GP[0] as PointAddr).X] = c;
-                                }
-                                else
-                                {
-                                    Matr_Left[(GP[0] as PointAddr).Y, (GP[0] as PointAddr).X] = c;
-                                }
+                                Matr_Right[y, x] = -1;
                             }
                             else
                             {
                                 Matr_Right[y, x] = c;
+
+                                c++;
                             }
-                            c++;
                         }
+                        else
+                            c++;
                     }
                     if (move)
                     {
@@ -393,16 +388,13 @@ namespace CoordMaker
                     }
                  }
 
+                List<XElement> cells = new List<XElement>();
                 
                  for (Int32 _x = 0; _x < CoordsXList.Count; _x++)
                  {
                      for (Int32 _y = 0; _y < CoordsYList.Count; _y++)
                      {
-                         if (Matr_Left[_y, _x] == 11)
-                         {
-
-                         }
-                         if (Matr_Left[_y, _x] < 0) continue;
+                        if (Matr_Left[_y, _x] < 0) continue;
                         var cellcoords = new XElement("cell");
                         cellcoords.SetAttributeValue("ID", Matr_Left[_y, _x]);
                         cellcoords.SetAttributeValue("X", CoordsXList[_x].Value + IncMatrLeftX[_y,_x]);
